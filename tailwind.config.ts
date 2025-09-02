@@ -24,6 +24,11 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				'monastery-gold': 'hsl(var(--monastery-gold))',
+				'prayer-red': 'hsl(var(--prayer-red))',
+				'himalayan-blue': 'hsl(var(--himalayan-blue))',
+				'sacred-white': 'hsl(var(--sacred-white))',
+				'mountain-gray': 'hsl(var(--mountain-gray))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'
@@ -84,11 +89,31 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				float: {
+					'0%, 100%': { transform: 'translateY(0px)' },
+					'50%': { transform: 'translateY(-10px)' }
+				},
+				glow: {
+					'0%': { boxShadow: '0 0 20px hsl(var(--monastery-gold) / 0.3)' },
+					'100%': { boxShadow: '0 0 40px hsl(var(--monastery-gold) / 0.6)' }
+				},
+				'fade-in-up': {
+					'0%': { opacity: '0', transform: 'translateY(30px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' }
+				},
+				'scale-in': {
+					'0%': { opacity: '0', transform: 'scale(0.9)' },
+					'100%': { opacity: '1', transform: 'scale(1)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'float': 'float 3s ease-in-out infinite',
+				'glow': 'glow 2s ease-in-out infinite alternate',
+				'fade-in-up': 'fade-in-up 0.8s ease-out',
+				'scale-in': 'scale-in 0.5s ease-out'
 			}
 		}
 	},
